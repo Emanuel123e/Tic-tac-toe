@@ -27,8 +27,8 @@ body {
 }
 
 .player-panel img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-right: 16px;
 }
 
@@ -44,12 +44,15 @@ body {
 }  
 
 .shape {
+    display: flex;
+    align-items: center;
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     top: 25px;
     bottom: 0;
-    left: 25px;
+    left: 35px;
+    right: 30px;
     right: 0;
 }
 
@@ -70,7 +73,7 @@ td {
 }
 
 td:hover {
-    background-color: rgba(33, 33, 33, 0.86);
+    background-color: rgba(17, 17, 17, 0.86);
 }
 
 table {
@@ -93,9 +96,14 @@ table tr td:last-child {
     border-right: 0;
 }
 
+.table-container {
+    
+}
+
 .horizontal-line {
-    height: 7px;
-    background-color: aliceblue;
+    height: 5px;
+    background-color: red;
+    box-shadow: 0px 0px 5px 5px #ffffff;
     width: 400px;
     position: absolute;
     transform: scaleX(0.0);
@@ -142,4 +150,73 @@ table tr td:last-child {
 .restart-btn:hover {
     background-color: #ff2323;
     color: white;
+}
+
+
+/*game-over IMG*/
+@media (max-width: 1100px) {
+    .game-over {
+        height: 80vh;
+        width: 100vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .game-over {
+        height: 77vh;
+        width: 80vh;
+    }
+}
+
+@media (max-width: 549px) {
+    .game-over {
+        height: 60vh;
+        width: 70vh;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 550px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .player-panel {
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .player-panel img {
+        width: 40px;
+        height: 40px;
+    }
+
+    tr {
+        width: 270px;
+    }
+
+    td {
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .shape {
+        left: 18px;
+        bottom: 18px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .horizontal-line {
+        width: 270px;
+    }
+
+    .restart-btn {
+        width: 125px;
+        height: 50px;
+        font-size: 20px;
+        padding: 0;
+    }
 }
